@@ -71,7 +71,7 @@
             ({key: window.GOOGLE_MAPS_API_KEY, v: "beta"});
         </script>
         <script>
-            @if(Auth::check()) <!-- ユーザーが認証されているかチェック -->
+            @if(Auth::check())
                 window.Laravel = {!! json_encode([
                     'csrfToken' => csrf_token(),
                     'apiToken' => Auth::user()->createToken('Token Name')->plainTextToken // トークンの作成と取得
